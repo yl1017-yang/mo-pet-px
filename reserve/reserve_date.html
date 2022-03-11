@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>펫미</title>
+<link rel="stylesheet" href="../resources/css/common.css?ver=a1">
+<link rel="stylesheet" href="../resources/css/reserve.css">
+
+<script src="../resources/js/jquery-3.4.1.js"></script>
+<script src="../resources/js/common.js"></script>
+
+<!-- 스와이퍼 4.5.1 -->
+<link rel="stylesheet" href="../resources/css/swiper.min.css">
+<script src="../resources/js/swiper.min.js"></script>
+</head>
+<body>
+
+<div class="wrap" id="wrap">
+	<!-- 날짜선택 상단 -->
+	<header class="reserve_header">
+        <div class="reserve_header_inner">
+			<span class="t2">날짜선택</span>
+			<span class="t3"><a href="../reserve/reserve.html"><img src="../images/common/icon_close2.png"></a></span>
+        </div>
+    </header>
+	<!-- //날짜선택 상단 -->
+
+	<!-- 달력 -->
+	<section class="reserve_section_info">
+		달력
+	</section>
+	<!-- //달력 -->
+
+	<!-- 담당자 / 시간 선택 리스트 -->
+	<section class="select_section_list">
+		<h3>담당자 / 시간 선택</h3>
+		<ul class="select_list">
+			<li>
+				<figure>
+					<img src="../images/main/img_mainstore_06.png" alt="">
+				</figure>
+				<div class="select_info">
+					<span class="t1">홍길동 (+20,000원)</span>
+					<span class="t2">믿음과 신뢰를 드리겠습니다. <br>항상 최선을 다하는 모습 보여드리겠습니다.</span>
+				</div>
+				<!-- 버튼 on 클래스 추가 -->
+				<div class="swiper-container date_info">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#">09:00</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="on">09:30</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">10:00</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">11:00</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">11:30</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">13:00</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<figure>
+					<img src="../images/main/img_mainstore_04.png" alt="">
+				</figure>
+				<div class="select_info">
+					<span class="t1">홍길동 (+0원)</span>
+				</div>
+				<!-- 버튼 on 클래스 추가 -->
+				<div class="swiper-container date_info">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#">09:00</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">09:30</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">10:00</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">11:00</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">13:30</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">15:00</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<figure>
+					<img src="../images/main/img_mainstore_05.png" alt="">
+				</figure>
+				<div class="select_info">
+					<span class="t1">홍길동 (+0원)</span>
+					<span class="t2">믿음과 신뢰를 드리겠습니다.</span>
+				</div>
+				<!-- 휴무 버튼 on 클래스 추가 -->
+				<div class="swiper-container date_info">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="holiday">휴무</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<figure>
+					<img src="../images/main/img_mainstore_04.png" alt="">
+				</figure>
+				<div class="select_info">
+					<span class="t1">홍길동 (+0원)</span>
+				</div>
+				<!-- 예약마감 버튼 on 클래스 추가 -->
+				<div class="swiper-container date_info">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="finish">예약마감</a>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<!-- //담당자 / 시간 선택 리스트 -->
+
+	<!-- 예약 툴바 -->
+	<section class="reserve_toolbar">
+		<div class="inner">
+			<a href="#" class="btn_select_end">선택완료</a>
+		</div>
+	</section>
+	<!-- //예약 툴바 -->
+
+	<script>
+	// 시간바
+	var sliderCategory = new Swiper('.date_info', {
+		slidesPerView: 4.6,
+        spaceBetween: 0,
+        nested :true,
+    }); 
+	</script>
+
+
+</div>
+</body>
+</html>

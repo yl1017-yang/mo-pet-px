@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>펫미</title>
+<link rel="stylesheet" href="../resources/css/common.css?ver=a1">
+<link rel="stylesheet" href="../resources/css/reserve.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="../resources/js/jquery-3.4.1.js"></script>
+<script src="../resources/js/common.js"></script>
+
+<!-- 스와이퍼 4.5.1 -->
+<link rel="stylesheet" href="../resources/css/swiper.min.css">
+<script src="../resources/js/swiper.min.js"></script>
+</head>
+<body>
+
+<div class="wrap" id="wrap">
+	<!-- 결제하기 상단 -->
+	<header class="reserve_header">
+        <div class="reserve_header_inner">
+            <span class="t1"><a href="#"><img src="../images/shop/arrow__48_b.png"></a></span>
+			<span class="t2">결제하기</span>
+			<span class="t3"><a href="../main/index.html"><img src="../images/shop/icon_home_b.png"></a></span>
+        </div>
+    </header>
+	<!-- //결제하기 상단 -->
+
+	<!-- 프로필 정보 -->
+	<section class="payment_info">
+		<div class="inner">
+			<ul>
+				<li>
+					<p class="title">이름</p>
+					<fieldset>
+						<input type="text" id="input_name" name="name" value="김말순" title="이름" placeholder="이름(실명)을 입력해 주세요" class="login_input" style="text-indent: 0px;" onkeyup="lo_check();">						 
+					</fieldset>
+				</li>
+				<li>
+					<p class="title">휴대폰번호 (-제외)</p>
+					<fieldset>
+						<input type="text" id="input_phone" name="phone" value="01012345678" title="휴대폰번호" placeholder="번호를 입력해 주세요" class="login_input" style="text-indent: 0px;" onkeyup="lo_check();" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+						<i class="fa-times3">인증번호 전송</i>
+
+						<i class="fa-times4" style="display:none; cursor:pointer;" onclick="phone_check()">인증번호 전송</i>
+
+						<input type="text" id="input_phone2" name="phone2" value="" title="휴대폰번호 인증" placeholder="인증번호를 입력해 주세요" class="login_input" style="text-indent: 0px; display:none;" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+						<i class="fa-times5" style="display:none; " onclick="#">4 :55</i>
+					</fieldset>
+				</li>
+				<li>
+					<input type="checkbox" name="checker" id="checker2" value="1" onclick="click_check();"> <label for="checker2">내 프로필 정보로 저장</label>
+					<textarea rows="9" name="bbcCntn" id="bbcCntn" title="내용 입력" placeholder="요청사항을 입력해주세요."></textarea>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- //프로필 정보 -->
+
+	<!-- 예약 정보/결제정보 -->
+	<section class="payment_info2">
+		<div class="inner">
+			<h3>예약정보</h3>
+			<div class="reserve_info">
+				<figure>
+					<img src="../images/main/img_premium_02.png" alt="">
+				</figure>
+				<p>그루밍살롱 애견미용실</p>
+			</div>
+
+			<!-- 예약1 -->
+			<h4>[예약 1]</h4>
+			<ul class="payment_list2">
+				<li>
+					<span class="t1">날짜</span>
+					<span class="t2">
+						2022년 2월11일 09:30
+					</span>
+					<span class="t2">
+						홍길동
+					</span>
+				</li>
+				<li class="list_type2">
+					<span class="t1">반려동물</span>
+					<div class="reserve_animals">
+						<figure><img src="../images/main/img_portfolio_03.png" alt=""></figure>
+						<span class="t2">초롱이 2.5kg</span>
+					</div>
+				</li>
+			</ul>
+
+			<h3>결제정보</h3>
+			<div class="payment_list3">
+				<div>
+					<span class="t1">반려견 미용 / 가위컷</span>
+					<span class="t2 bold">70,000원</span>
+				</div>
+				<!-- 반려견 내용 더보기 -->
+				<a href="#none" class="btn_detail"><span class="blind">더보기</span></a>
+				<ul class="detail_con">
+					<li>
+						<div><span class="t1">품종</span> <span>(소형견)</span></div>
+						<div><span class="t2">+ 20,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">몸무게</span> <span>(3.00이상 ~ 5.00kg미만)</span></div>
+						<div><span class="t2">+ 30,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">털길이</span> <span>(5mm)</span></div>
+						<div><span class="t2">+ 10,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">다리 스타일</span> <span>(부츠)</span></div>
+						<div><span class="t2">+ 15,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">몸통 스타일</span> <span>(풀코트 4cm이상)</span></div>
+						<div><span class="t2">+ 10,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">담당자</span> <span>(홍길동)</span></div>
+						<div><span class="t2">+ 30,000원</span></div>
+					</li>
+				</ul>
+				<!-- //반려견 내용 더보기 -->
+			</div>
+			<!-- //예약1 -->
+
+
+			<!-- 예약2 -->
+			<h4>[예약 2]</h4>
+			<ul class="payment_list2">
+				<li>
+					<span class="t1">날짜</span>
+					<span class="t2">
+						2022년 2월11일 09:30
+					</span>
+					<span class="t2">
+						홍길동
+					</span>
+				</li>
+				<li class="list_type2">
+					<span class="t1">반려동물</span>
+					<div class="reserve_animals">
+						<figure><img src="../images/main/img_portfolio_03.png" alt=""></figure>
+						<span class="t2">초롱이 2.5kg</span>
+					</div>
+				</li>
+			</ul>
+
+			<h3>결제정보</h3>
+			<div class="payment_list3">
+				<div>
+					<span class="t1">반려견 미용 / 가위컷</span>
+					<span class="t2 bold">70,000원</span>
+				</div>
+				<!-- 반려견 내용 더보기 -->
+				<a href="#none" class="btn_detail"><span class="blind">더보기</span></a>
+				<ul class="detail_con">
+					<li>
+						<div><span class="t1">품종</span> <span>(소형견)</span></div>
+						<div><span class="t2">+ 20,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">몸무게</span> <span>(3.00이상 ~ 5.00kg미만)</span></div>
+						<div><span class="t2">+ 30,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">털길이</span> <span>(5mm)</span></div>
+						<div><span class="t2">+ 10,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">다리 스타일</span> <span>(부츠)</span></div>
+						<div><span class="t2">+ 15,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">몸통 스타일</span> <span>(풀코트 4cm이상)</span></div>
+						<div><span class="t2">+ 10,000원</span></div>
+					</li>
+					<li>
+						<div><span class="t1">담당자</span> <span>(홍길동)</span></div>
+						<div><span class="t2">+ 30,000원</span></div>
+					</li>
+				</ul>
+				<!-- //반려견 내용 더보기 -->
+			</div>
+			<!-- //예약2 -->
+
+
+			<!-- 안내사항 -->
+			<div class="payment_notice">
+				<ul>
+					<li>예약일 기준 7일 전까지 취소시 100% 환불</li>
+					<li>예약일 기준 6일 전까지 취소시 90% 환불</li>
+					<li>예약일 기준 5일 전까지 취소시 80% 환불</li>
+					<li>예약일 기준 4일 전까지 취소시 70% 환불</li>
+					<li>예약일 기준 3일 전까지 취소시 60% 환불</li>
+					<li>예약일 기준 2일 전까지 취소시 50% 환불</li>
+					<li>예약일 기준 1일 전까지 취소시 30% 환불</li>
+					<li>예약일 당일 취소 및 미방문시 환불불가</li>
+					<li>내 반려동물의 정보 및 옵션정보가 매장에서의 정보와 다를 경우 결제금액의 차이가 발생할 수 있습니다.</li>
+					<li>내 반려동물이 매장의 서비스를 받을 시 안내사항 및 동의서에 동의하셔야 서비스를 받으실 수 있습니다.</li>
+				</ul>
+			</div>
+			<!-- //안내사항 -->
+		</div>
+	</section>
+	<!-- //예약하기 리스트 -->
+
+	<!-- 동의하기 -->
+	<section class="agree_info">
+		<div class="inner">
+			 <div class="agree1">
+				<p><input type="checkbox"  name="checker" id="checker1" value='selectall' onclick='selectAll(this); click_check();'> <label for="checker1">전체 동의하기</p>
+			 </div>
+
+			<div class="agree2">
+				<p><input type="checkbox" name="checker" id="checker2" value="1" onclick="click_check();"> <label for="checker2">상기 결제 내역을 확인 및 결제 진행에 동의</p>
+				<p><input type="checkbox" name="checker" id="checker3" value="1" onclick="click_check();"> <label for="checker3">취소 및 미방문시 환불수수료를 확인하였으며, 동의</p>
+				<p><input type="checkbox" name="checker" id="checker4" value="1" onclick="click_check();"> <label for="checker4">매장 안내사항 및 동의서를 확인하였으며, 동의</p>
+				<a href="agree1.html" class="btn_agree">안내사항 및 동의서 보기</a>
+			</div>
+
+			<!-- <button style="margin-top: 40px;" type="button" disabled="disabled" id="TestBtn" class="btn_login">다음</button> -->
+		</div>
+	</section>
+	<!-- //동의하기 -->
+
+	<!-- 예약 툴바 -->
+	<section class="reserve_toolbar">
+		<div class="inner">
+			<div class="total_pay">
+				<div><span class="t1">총 결제금액</span></div>
+				<div><span class="t2">140,000원</span></div>
+			</div>
+			<div class="btn_wrap">
+				<a href="#" class="btn_payment2">결제하기</a>
+			</div>
+		</div>
+	</section>
+	<!-- //예약 툴바 -->
+
+	<script>
+	// 반려견 미용/가위컷 상세정보 나타나기
+	$('.payment_info2 .payment_list3 .btn_detail').on('click',function(e) {
+        e.preventDefault();
+        if ($(this).parent().hasClass('on')) {
+            $(this).parent().removeClass('on').find('.detail_con').slideUp(300);
+        } else {
+            $(this).parent().addClass('on').find('.detail_con').slideDown(300);
+        }
+    });
+
+	//동의하기
+	function selectAll(selectAll) {
+	const checkboxes
+		= document.getElementsByName('checker');
+
+	checkboxes.forEach((checkbox) => {
+		checkbox.checked = selectAll.checked;
+	})
+	}
+	function click_check()
+	{
+		if($("#checker2").is(":checked") == true && $("#checker3").is(":checked") == true && $("#checker4").is(":checked") == true)
+		{
+			$('#TestBtn').addClass('btn_login_on');
+			$('#TestBtn').removeClass('btn_login');
+			$('#TestBtn').removeAttr('disabled');
+		}
+		else
+		{
+			$('#TestBtn').addClass('btn_login');
+			$('#TestBtn').removeClass('btn_login_on');
+			$('#TestBtn').attr('disabled', 'disabled');
+		}
+	}
+	</script>
+
+
+</div>
+</body>
+</html>
