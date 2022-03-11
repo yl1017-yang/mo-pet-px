@@ -56,16 +56,16 @@ body {
 .reserve_section_list .total_pay .t2{font-size:16px;font-weight:800;color:#FF781E;}
 
 /* 예약하기/결제하기 - 예약 툴바 */
-.reserve_toolbar{position:fixed;bottom:0;left:0;width:100%;min-height:124px;background:#fff;box-shadow:-1px -4px 20px -6px rgba(0,0,0,0.09);padding:20px 0 40px;z-index:10;}
-.reserve_toolbar .total_pay{display:flex;justify-content:space-between;margin-bottom:12px;} 
+.reserve_toolbar{position:fixed;bottom:0;left:0;width:100%;background:#fff;box-shadow:-1px -4px 20px -6px rgba(0,0,0,0.09);padding:20px 0 40px;z-index:10;}
+.reserve_toolbar .total_pay{display:flex;justify-content:space-between;} 
 .reserve_toolbar .total_pay .t1{font-weight:500;color:#1a1a1a;}
 .reserve_toolbar .total_pay .t2{font-size:16px;font-weight:800;color:#FF781E;}
-.reserve_toolbar .btn_wrap{display:flex;justify-content:space-between;}
-.reserve_toolbar .btn_wrap .btn_cart{display:block;width:48%;padding:3.733vw 0;background:#fff;border:1px solid #FF781E;color:#FF781E;font-size:16px;font-weight:500;text-align:center;border-radius:8px;}
-.reserve_toolbar .btn_wrap .btn_cart.disabled{border:1px solid #e0e0e0;color:#a9a9a9;font-weight:300;}
-.reserve_toolbar .btn_wrap .btn_payment{display:block;width:48%;padding:3.733vw 0;background:#FF781E;color:#fff;font-size:16px;font-weight:500;text-align:center;border-radius:8px;}
-.reserve_toolbar .btn_wrap .btn_payment.disabled{background:#e0e0e0;color:#fff;font-weight:300;}
-.reserve_toolbar .btn_wrap .btn_payment2{display:block;width:100%;padding:3.733vw 0;background:#FF781E;color:#fff;font-size:16px;font-weight:500;text-align:center;border-radius:8px;}
+.reserve_toolbar .btn_wrap{display:flex;justify-content:space-between;margin-top:12px;}
+.reserve_toolbar .btn_cart{display:block;width:48%;padding:3.733vw 0;background:#fff;border:1px solid #FF781E;color:#FF781E;font-size:16px;font-weight:500;text-align:center;border-radius:8px;}
+.reserve_toolbar .btn_cart.disabled{border:1px solid #e0e0e0;color:#a9a9a9;font-weight:300;}
+.reserve_toolbar .btn_payment{display:block;width:48%;padding:3.733vw 0;background:#FF781E;color:#fff;font-size:16px;font-weight:500;text-align:center;border-radius:8px;}
+.reserve_toolbar .btn_payment.disabled{background:#e0e0e0;color:#fff;font-weight:300;}
+.reserve_toolbar .btn_payment2{display:block;width:100%;padding:3.733vw 0;background:#FF781E;color:#fff;font-size:16px;font-weight:500;text-align:center;border-radius:8px;}
 /* 날짜선택 - 선택완료 버튼 */
 .reserve_toolbar .btn_select_end{display:block;width:100%;padding:3.733vw 0;margin-top:12px;background:#FF781E;color:#fff;font-size:16px;font-weight:500;text-align:center;border-radius:8px;}
 
@@ -184,4 +184,22 @@ textarea::placeholder{font-size:14px;}
 .agree_content_wrap .agree_tab li.on{color:#1a1a1a;font-weight:700;border-bottom:2px solid #1a1a1a;}
 .agree_content_wrap .content{display:none;line-height:1.7;height:85vw;overflow-y:scroll;}
 .agree_content_wrap .content.on{display:block;}
+
+/* 예약 완료 - 정보 */
+.toolbar_padding{padding-bottom:156px;}
+.garoline{border:0;height:6px;background:#f0f0f0;margin:40px 0 28px;}
+.done_section_info{text-align:center;padding:30px 0;background:#fafafa;}
+.done_section_info img{width:50px;height:50px;margin-bottom:12px;}
+
+.done_section_list{}
+.done_section_list h3{font-size:18px;font-weight:700;color:#1a1a1a;margin-top:40px;padding-bottom:24px;border-bottom:1px solid #1a1a1a;}
+.done_section_list .done_list li{display:flex;align-items:center;padding-top:24px;}
+.done_section_list .done_list li > div:first-child{width:70px;}
+.done_section_list .done_list .t1{font-weight:500;color:#333;}
+.done_section_list .done_list .t2{font-weight:700;color:#1a1a1a;}
+.done_section_list .done_list .reserve_animals{display:flex;align-items:center;}
+.done_section_list .done_list .reserve_animals figure{border-radius:100%;overflow:hidden;width:40px;height:40px;margin-right:6px;}
+
+.done_section_list .done_list .option{align-items:flex-start;}
+.done_section_list .done_list .option dd{font-weight:700;color:#1a1a1a;margin:6px 0 12px;}
 
