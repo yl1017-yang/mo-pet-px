@@ -32,7 +32,55 @@
 
 	<!-- 달력 -->
 	<section class="reserve_section_info">
-		달력
+		<style>
+			.ui-widget-header{border:0 !important;background:transparent !important;}
+			.ui-widget.ui-widget-content{border:0 !important;width:100%;background:transparent !important;}
+			.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{border:0 !important;background:transparent !important;}
+			.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{color:rgb(196, 0, 0) !important;font-weight:bold;background:#000;}
+		</style>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+		<script>
+			$.datepicker.setDefaults({
+				buttonImage: "/application/db/jquery/images/calendar.gif", // 버튼 이미지
+				dateFormat: 'yy-mm-dd',
+				prevText: '이전 달',
+				nextText: '다음 달',
+				monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+				monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+				dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+				showMonthAfterYear: true,
+				yearSuffix: '.'
+			});
+			
+			$( function() {
+			  $( "#datepicker" ).datepicker();
+			} );
+		</script>
+		
+		<div id="datepicker"></div>
+		https://flatpickr.js.org/instance-methods-properties-elements/
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script>
+			$(".selector").flatpickr(optional_config);
+		</script>
+		<div class="flatpickr">
+			<input type="text" placeholder="Select Date.." data-input> <!-- input is mandatory -->
+		
+			<a class="input-button" title="toggle" data-toggle>
+				<i class="icon-calendar"></i>
+			</a>
+		
+			<a class="input-button" title="clear" data-clear>
+				<i class="icon-close"></i>
+			</a>
+		</div>
+
+		
 	</section>
 	<!-- //달력 -->
 
