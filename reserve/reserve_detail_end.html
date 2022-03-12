@@ -152,9 +152,96 @@
 
 	<!-- 버튼 -->
 	<div class="btn_wrap type2">
-		<a href="#" class="btn_point">리뷰작성</a>
+		<a href="#cate_pop1" class="btn_point">리뷰작성</a>
 	</div>
 	<!-- 버튼 -->
+
+	<!-- [D] 리뷰작성 토스트배너 -->
+    <div id="cate_pop1" class="review_box">
+        <div class="dim_bg"></div>
+        <div class="review_content">
+            <a href="#" class="btn_close"><span class="blind">닫기</span></a>
+            <p>리뷰 작성</p>
+
+			<div class="scroll">
+				<div class="review_content_info">
+					<figure>
+						<img src="../images/main/img_portfolio_03.png" alt="">
+					</figure>
+					<p>반려견 미용 / 가위컷</p>
+				</div>
+
+				<div class="review_content_wrap">
+					<form name="reviewform" class="reviewform" method="post" action="/save">
+						<input type="hidden" name="rate" id="rate" value="0"/>
+						<p class="text">서비스에 대해 얼마나 만족하시나요?</p>
+						<div class="rating">
+							<!-- 해당 별점을 클릭하면 해당 별과 그 왼쪽의 모든 별의 체크박스에 checked 적용 -->
+							<input type="checkbox" name="rating" id="rating1" value="1" class="rate_radio" title="1점">
+							<label for="rating1"></label>
+							<input type="checkbox" name="rating" id="rating2" value="2" class="rate_radio" title="2점">
+							<label for="rating2"></label>
+							<input type="checkbox" name="rating" id="rating3" value="3" class="rate_radio" title="3점" >
+							<label for="rating3"></label>
+							<input type="checkbox" name="rating" id="rating4" value="4" class="rate_radio" title="4점">
+							<label for="rating4"></label>
+							<input type="checkbox" name="rating" id="rating5" value="5" class="rate_radio" title="5점">
+							<label for="rating5"></label>
+						</div>
+						<div class="review_contents">
+							<textarea id="review_textarea" name="review" cols="30" placeholder="해당 서비스에 대한 고객님의 솔직한 평가를 남겨주세요 (최소 10자 이상 작성)"></textarea>
+							<div id="review_cnt">0 / 최대 300자</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="review_content_wrap">
+					<p class="text">사진첨부</p>
+
+					<div class="btn_wrap">
+						<button type="button" title="사진 첨부" class="btn_add_photo">첨부하기</button>
+					</div>
+					<br><br>
+
+					<ul class="photo_box">
+						<li>
+							<figure>
+								<img src="../images/main/img_portfolio_03.png" alt="">
+								<a href="#" class="btn_photo_del"><span class="blind">삭제</span></a>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../images/main/img_portfolio_02.png" alt="">
+								<a href="#" class="btn_photo_del"><span class="blind">삭제</span></a>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../images/main/img_portfolio_01.png" alt="">
+								<a href="#" class="btn_photo_del"><span class="blind">삭제</span></a>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../images/main/img_portfolio_04.png" alt="">
+								<a href="#" class="btn_photo_del"><span class="blind">삭제</span></a>
+							</figure>
+						</li>
+						<li>
+							<figure class="add_box">
+							</figure>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+
+        </div>
+    </div>
+	<!-- //[D] 리뷰작성 토스트배너 -->
+	
 
 	<script>
 	// 반려견 미용/가위컷 상세정보 나타나기
@@ -166,6 +253,57 @@
             $(this).parent().addClass('on').find('.detail_con').slideDown(300);
         }
     });
+
+	// 리뷰작성 토스트배너
+    $('.btn_point').on('click', function() {
+        $(".review_box .btn_close").show();
+        $(".review_box" + $(this).attr("href")).fadeIn(200);
+        $(".review_box").find('.review_content').animate({bottom:0}, 200);
+        $("body").css({'height':$(window).height(), 'overflow':'hidden'});
+    });
+    $('.review_box .btn_close').on('click', function(e) {
+		e.preventDefault();
+        $(".btn_agree").show();
+        $(".review_box").fadeOut(300);
+        $(".review_box").find('.review_content').animate({bottom:-150}, 300);
+        $("body").css({'height':'auto', 'overflow':'auto'});
+    });
+	
+	//별점 마킹 모듈 프로토타입으로 생성
+	function Rating(){};
+	Rating.prototype.rate = 0;
+	Rating.prototype.setRate = function(newrate){
+		//별점 마킹 - 클릭한 별 이하 모든 별 체크 처리
+		this.rate = newrate;
+		let items = document.querySelectorAll('.rate_radio');
+		items.forEach(function(item, idx){
+			if(idx < newrate){
+				item.checked = true;
+			}else{
+				item.checked = false;
+			}
+		});
+	}
+	let rating = new Rating();
+
+	document.addEventListener('DOMContentLoaded', function(){
+		document.querySelector('.rating').addEventListener('click',function(e){
+			let elem = e.target;
+			if(elem.classList.contains('rate_radio')){
+				rating.setRate(parseInt(elem.value));
+			}
+		})
+	});
+
+	//textarea 최대글자수 
+	$('#review_textarea').on('keyup', function() {
+		$('#review_cnt').html(" "+ $(this).val().length +" / 최대 300자");
+
+		if($(this).val().length > 300) {
+			$(this).val($(this).val().substring(0, 300));
+			$('#review_cnt').html("300 / 300");
+		}
+	});
 	</script>
 
 

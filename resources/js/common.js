@@ -169,7 +169,8 @@ $(function() {
         $(".category_box").find('.category_content').animate({bottom:0}, 200);
         $("body").css({'height':$(window).height(), 'overflow':'hidden'});
     });
-    $('.category_box .btn_close').on('click', function() {
+    $('.category_box .btn_close').on('click', function(e) {
+        e.preventDefault();
         $(".btn_cate").show();
         $(".category_box").fadeOut(300);
         //$(".category_box").css({'display':'none'});
