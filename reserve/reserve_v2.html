@@ -48,10 +48,11 @@
 			<ul class="reserve_info_list">
 				<li>
 					<span class="t1">날짜 선택</span>
-					<fieldset>
-						<input type="text" id="input_text" name="id" value="" title="날짜선택" placeholder="날짜를 선택해 주세요" onkeyup="lo_check();">
-						<a href="../reserve/reserve_date.html" class="icon"><img  src="../images/common/icon_calander.png"></a>
-					</fieldset>
+					<div class="list_type1">
+						<a href="#" class="btn_edit">변경</a>
+						<span class="t2">2022년 2월11일 09:30</span>
+						<span class="t2">담당자  홍길동</span>
+					</div>
 				</li>
 				<li>
 					<div><span class="t1">소요시간</span></div>
@@ -64,6 +65,10 @@
 						<ul class="reserve_animals">
 							<li>
 								<figure><img src="../images/main/img_portfolio_03.png" alt=""></figure>
+								<span class="t2">초롱이 2.5kg</span>
+							</li>
+							<li>
+								<figure><img src="../images/main/img_portfolio_04.png" alt=""></figure>
 								<span class="t2">초롱이 2.5kg</span>
 							</li>
 						</ul>
@@ -124,7 +129,7 @@
 			</div>
 			<div class="btn_wrap">
 				<!-- 버튼 비활성화 disabled 클래스 추가 -->
-				<a href="#" class="btn_outline_50 disabled">보관함에 담기</a>
+				<a href="#" class="btn_outline_50">보관함에 담기</a>
 				<a href="#" class="btn_point_50">결제하기</a>
 			</div>
 		</div>

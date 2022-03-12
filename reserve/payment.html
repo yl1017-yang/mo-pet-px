@@ -77,12 +77,8 @@
 			<ul class="payment_list2">
 				<li>
 					<span class="t1">날짜</span>
-					<span class="t2">
-						2022년 2월11일 09:30
-					</span>
-					<span class="t2">
-						홍길동
-					</span>
+					<span class="t2">2022년 2월11일 09:30</span>
+					<span class="t2">홍길동</span>
 				</li>
 				<li class="list_type2">
 					<span class="t1">반려동물</span>
@@ -173,7 +169,7 @@
             <p>안내사항 및 동의서</p>
 
 			<div class="agree_content_wrap">
-				<!-- <div class="swiper-container agree_tab">
+					<!-- <div class="swiper-container agree_tab">
 					<div class="swiper-wrapper">
 						<li class="swiper-slide" data-id="agree_con1" class="on">
 							이중모 클리핑 미용동의서
@@ -186,7 +182,6 @@
 						</li>
 					</div>
 				</div> -->
-				
 				<div class="agree_tab">
 					<ul>
 						<li data-id="agree_con1" class="on">이중모 클리핑 미용동의서</li>
@@ -194,6 +189,7 @@
 						<li data-id="agree_con3">노령견 미용동의서</li>
 					</ul>
 				</div>
+				
 				<!-- 안내사항 : 내용1 -->
 				<div id="agree_con1" class="content on">
 					- 그루밍 케어를 위해 저희 그루밍 캐나다를 찾아주신 고객님들의 반려견 미용함에 있어 최선을 다 할 것을 약속드립니다. <br>
@@ -222,6 +218,8 @@
     </div>
 	<!-- //[D] 안내사항 및 동의서 보기 토스트배너 -->
 
+	<div class="toolbar_padding"><span class="blind">하단툴바 간격</span></div>
+
 	<!-- 예약 툴바 -->
 	<section class="reserve_toolbar">
 		<div class="inner">
@@ -230,7 +228,7 @@
 				<div><span class="t2">70,000원</span></div>
 			</div>
 			<div class="btn_wrap">
-				<a href="#" class="btn_payment2">결제하기</a>
+				<a href="#" class="btn_point">결제하기</a>
 			</div>
 		</div>
 	</section>
@@ -238,7 +236,7 @@
 
 	<script>
 	// 반려견 미용/가위컷 상세정보 나타나기
-	$('.payment_info2 .payment_list3 .btn_detail').on('click',function(e) {
+	$('.payment_info2 .btn_detail').on('click',function(e) {
         e.preventDefault();
         if ($(this).parent().hasClass('on')) {
             $(this).parent().removeClass('on').find('.detail_con').slideUp(300);

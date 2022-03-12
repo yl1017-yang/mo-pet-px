@@ -233,6 +233,8 @@
 	</section>
 	<!-- //동의하기 -->
 
+	<div class="toolbar_padding"><span class="blind">하단툴바 간격</span></div>
+	
 	<!-- 예약 툴바 -->
 	<section class="reserve_toolbar">
 		<div class="inner">
@@ -241,7 +243,7 @@
 				<div><span class="t2">140,000원</span></div>
 			</div>
 			<div class="btn_wrap">
-				<a href="#" class="btn_payment2">결제하기</a>
+				<a href="#" class="btn_point">결제하기</a>
 			</div>
 		</div>
 	</section>
@@ -249,7 +251,7 @@
 
 	<script>
 	// 반려견 미용/가위컷 상세정보 나타나기
-	$('.payment_info2 .payment_list3 .btn_detail').on('click',function(e) {
+	$('.payment_info2 .btn_detail').on('click',function(e) {
         e.preventDefault();
         if ($(this).parent().hasClass('on')) {
             $(this).parent().removeClass('on').find('.detail_con').slideUp(300);
