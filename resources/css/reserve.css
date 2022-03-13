@@ -331,7 +331,7 @@ button:disabled{background:#f0f0f0 !important;color:#1a1a1a !important;}
 .review_content_wrap .text{font-size:18px;font-weight:500;color:#1a1a1a;margin-bottom:10px;}
 .rating input[type=checkbox] {display:none;}
 .rating .rate_radio + label {position:relative;display:inline-block;margin-left:-4px;z-index:10;width:30px;height:30px;background:url("../../images/common/icon_star_03.png") no-repeat 0 0/100%;}
-.rating .rate_radio:checked + label{background-image:url('../../images/common/icon_star_02.png');}
+.rating .rate_radio:checked + label{background-image:url('../../images/common/icon_star_02.png') !important;}
 .review_content_wrap .review_contents{position:relative;margin:20px 0 24px;width:100%;height:180px;border:1px solid #e0e0e0;border-radius:4px;padding:12px 12px 40px 12px;}
 .review_content_wrap .review_contents #review_textarea{width:100%;height:100%;}
 .review_content_wrap .review_contents #review_cnt{position:absolute;bottom:12px;right:12px;}
