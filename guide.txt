@@ -30,3 +30,85 @@ https://yl1017-yang.github.io/mo-pet/sub/local_map.html
 
 ● 내주변 - 지도보기(GPS 꺼져있을때)
 https://yl1017-yang.github.io/mo-pet/sub/local_map_setting.html
+
+
+------------------------------------------------------------------------------------------------------
+2022/03/11 작업내역
+
+- 추가파일
+/images/common/ 이미지 추가
+/resources/css/reserve.css 
+
+- 추가폴더
+/reserve/
+
+
+● 메인 (경로변경)
+https://yl1017-yang.github.io/mo-pet-px/main/index.html
+
+● 매장상세(제휴점) – 예약하기 - 옵션선택 (토스트배너라 제작안함)
+ 
+
+● 매장상세(제휴점) – 예약하기
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve.html
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_v2.html
+- [결제하기] 버튼 클릭시 레이어팝업 출력
+
+● 매장상세(제휴점) – 예약하기 - 날짜 선택
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_date.html
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_date_v2.html
+
+
+
+● 결제하기
+https://yl1017-yang.github.io/mo-pet-px/reserve/payment.html
+- 동의하기 하단 [안내사항 및 동의서보기] 클릭시 토스트배너 출력
+
+● 결제하기 - 2개이상 예약
+https://yl1017-yang.github.io/mo-pet-px/reserve/payment_v2.html
+
+● 예약완료 - 예약상품이 1개일때
+https://yl1017-yang.github.io/mo-pet-px/reserve/payment_com.html
+
+● 예약완료 - 예약상품이 2개일때
+https://yl1017-yang.github.io/mo-pet-px/reserve/payment_com_v2.html
+
+
+
+● 예약 전체리스트
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_list.html
+- [최신순] 버튼 클릭 토스트 배너 출력
+
+● 예약 전체리스트 - 예약내역 없을시
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_list_no.html
+
+● 예약상세 - 결제완료 : 예약변경 가능한경우
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_detail.html
+
+● 예약상세 - 결제완료 : 예약변경 불가능한경우
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_detail_v2.html
+
+● 예약상세 - 결제취소
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_detail_cancle.html
+
+● 예약상세 - 예약변경
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_edit.html
+
+● 예약상세 - 미방문, 예약확정, 예약취소 
+예약 상세폼들과 동일하여 제작안했음
+
+
+
+● 예약상세 - 서비스완료
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_detail_end.html
+- [리뷰작성] [내가 쓴 리뷰] 버튼 클릭시 토스트팝업 출력
+
+● 예약상세 - 리뷰작성
+- [리뷰작성] 버튼 클릭시 리뷰작성 토스트팝업 출력
+
+● 예약상세 - 리뷰작성 - 내가 쓴 리뷰 
+- [내가 쓴 리뷰 ] 버튼 클릭시 리뷰작성 토스트팝업 출력
+
+● 예약상세 - 리뷰작성 - 사진선택
+https://yl1017-yang.github.io/mo-pet-px/reserve/reserve_review_photo.html
+
