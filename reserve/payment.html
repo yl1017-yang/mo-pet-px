@@ -145,17 +145,15 @@
 	<section class="agree_info">
 		<div class="inner">
 			 <div class="agree1">
-				<p><input type="checkbox"  name="checker" id="checker1" value='selectall' onclick='selectAll(this); click_check();'> <label for="checker1">전체 동의하기</p>
+				<p><input type="checkbox" name="checkerall" id="checker_all" value='selectall'> <label for="checker_all">전체 동의하기</p>
 			 </div>
 
 			<div class="agree2">
-				<p><input type="checkbox" name="checker" id="checker2" value="1" onclick="click_check();"> <label for="checker2">상기 결제 내역을 확인 및 결제 진행에 동의</p>
-				<p><input type="checkbox" name="checker" id="checker3" value="1" onclick="click_check();"> <label for="checker3">취소 및 미방문시 환불수수료를 확인하였으며, 동의</p>
-				<p><input type="checkbox" name="checker" id="checker4" value="1" onclick="click_check();"> <label for="checker4">매장 안내사항 및 동의서를 확인하였으며, 동의</p>
+				<p><input type="checkbox" name="checker" id="checkbox1" value="1" class="all"> <label for="checkbox1">상기 결제 내역을 확인 및 결제 진행에 동의</p>
+				<p><input type="checkbox" name="checker" id="checkbox2" value="2" class="all"> <label for="checkbox2">취소 및 미방문시 환불수수료를 확인하였으며, 동의</p>
+				<p><input type="checkbox" name="checker" id="checkbox3" value="3" class="all"> <label for="checkbox3">매장 안내사항 및 동의서를 확인하였으며, 동의</p>
 				<a href="#cate_pop1" class="btn_agree">안내사항 및 동의서 보기 (클릭시 토스트배너 출력)</a>
 			</div>
-
-			<!-- <button style="margin-top: 40px;" type="button" disabled="disabled" id="TestBtn" class="btn_login">다음</button> -->
 		</div>
 	</section>
 	<!-- //동의하기 -->
@@ -217,7 +215,7 @@
 				<div><span class="t2">70,000원</span></div>
 			</div>
 			<div class="btn_wrap">
-				<a href="#" class="btn_point">결제하기</a>
+				<button type="button" disabled="disabled" id="TestBtn" class="btn_point">결제하기</button>
 			</div>
 		</div>
 	</section>
@@ -258,29 +256,23 @@
     });
 
 	//동의하기
-	function selectAll(selectAll) {
-	const checkboxes
-		= document.getElementsByName('checker');
+	$('#checker_all').change(function () { 
+		var checked = $(this).prop('checked'); 
+		$('.all').prop('checked', checked); 
+	});
 
-	checkboxes.forEach((checkbox) => {
-		checkbox.checked = selectAll.checked;
-	})
-	}
-	function click_check()
-	{
-		if($("#checker2").is(":checked") == true && $("#checker3").is(":checked") == true && $("#checker4").is(":checked") == true)
-		{
-			$('#TestBtn').addClass('btn_login_on');
-			$('#TestBtn').removeClass('btn_login');
-			$('#TestBtn').removeAttr('disabled');
-		}
-		else
-		{
-			$('#TestBtn').addClass('btn_login');
-			$('#TestBtn').removeClass('btn_login_on');
-			$('#TestBtn').attr('disabled', 'disabled');
-		}
-	}
+	$('.all').change(function () { 
+		var tmpLength = $('.all').length; 
+		var checkedLength = $('.all:checked').length; 
+		var selectAll = (tmpLength == checkedLength); 
+		$('#checker_all').prop('checked', selectAll); selectAll ? 
+		$('#TestBtn').removeAttr('disabled'):$('#TestBtn').attr('disabled','disabled'); 
+	});
+
+	$('#checker_all').change(function () { 
+		$(this).prop('checked') ? $('#TestBtn').removeAttr('disabled'):$('#TestBtn').attr('disabled','disabled'); 
+	});
+
 	</script>
 
 
